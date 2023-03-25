@@ -10,34 +10,42 @@ CREATE TABLE public.students (
 	CONSTRAINT students_email_key UNIQUE (email),
 	CONSTRAINT students_pkey PRIMARY KEY (id)
 );
-
-
+1. Вывести все поля и все строки.
+2. Вывести всех студентов в таблице
 select * from students
 order by name;
 
+3. Вывести только Id пользователей
 select id from students
 
-select name from students
-
+4. Вывести только имя пользователей
+select name from students\
+5. Вывести только email пользователей
 select email from students 
 
+6. Вывести имя и email пользователей
 select name, email from students
 
+7. Вывести id, имя, email и дату создания пользователей
 select id, name, email, created_on from students 
 
+8. Вывести пользователей где password 12333
 SELECT name from students
 where password='12333';
 
+ 9. Вывести пользователей которые были созданы 2021-03-26 00:00:00
 select name from students 
 	where created_on= '2021-03-26 00:00:00';
 
+10. Вывести пользователей где в имени есть слово Анна
 select name from students 
 	where name like '%Anna%';
 
+11. Вывести пользователей где в имени в конце есть 8
 select name from students 
 	where name like '%8';
 
-
+12. Вывести пользователей где в имени в есть буква а
 select name from students 
 	where name like '%a%';
 
